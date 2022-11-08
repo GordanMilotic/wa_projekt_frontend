@@ -146,7 +146,7 @@
     text-decoration: none;
     appearance: button;
   }
-  .button input:hover {
+  .button input:active {
     background-color: #01bffd;
     border: 1px solid #01bffd;
     color: white;
