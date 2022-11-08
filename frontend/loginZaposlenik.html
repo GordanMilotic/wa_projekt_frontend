@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PoolProof</title>
     <link rel="icon" type="image/x-icon" href="favicon.jpg" />
-    <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+    <link rel="script" type="text/javascript" href="loginZaposlenik.html" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="loginZaposlenik.css"
+    />
   </head>
   <body>
     <img src="logo1.jpg" alt="" />
     <div class="type_of_login">
       <div class="zaposlenik">
-        <input type="button" onclick="" value="ZAPOSLENIK" />
+        <input type="button" id="button" onclick="" value="ZAPOSLENIK" />
       </div>
 
       <div class="vlasnik">
-        <input type="button" onclick="" value="VLASNIK OBJEKTA" />
+        <input type="button" id="button" onclick="" value="VLASNIK" />
       </div>
     </div>
     <div class="inputs">
@@ -24,17 +30,17 @@
 
       <form method="post">
         <div class="text_input">
-          <input type="text" placeholder="Korisničko ime" required="required" />
+          <input type="text" placeholder="Korisničko ime" required />
         </div>
 
         <div class="text_input">
-          <input type="password" placeholder="Lozinka" required="required" />
+          <input type="password" placeholder="Lozinka" required />
         </div>
 
         <div class="button">
           <input
             type="button"
-            onclick="location.href='main.html';"
+            onclick="location.href='mainZaposlenik.html';"
             value="Prijava"
           />
         </div>

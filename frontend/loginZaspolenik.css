@@ -17,26 +17,86 @@
     display: grid;
     grid-template-columns: 5fr 5fr;
     grid-template-rows: 20fr 20fr;
+    height: 75px;
   }
  
   .vlasnik{
     text-align: center;
     padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
   }
 
-  .vlasnik button{
+  .vlasnik input{
+    font-family: "Poppins", sans-serif;
     color: black;
+    background-color: white;
+    border: 2px solid black;
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    transition-duration:0.3s;
+  }
+
+  .vlasnik input:active{
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-size:medium;
+    background-color: white;
+    border: 2px solid black;
+    height:45px;
+    width:120px;
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
   }
 
   .zaposlenik{
     text-align: center;
     padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
   }
 
-  .zaposlenik button{
+  .zaposlenik input{
+    font-family: "Poppins", sans-serif;
     color: black;
+    background-color: white;
+    border: 2px solid black;
+    height:35px;
+    width:100px;
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    transition-duration:0.3s;
   }
 
+  .zaposlenik input:active{
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-size:medium;
+    background-color: white;
+    border: 2px solid black;
+    height:45px;
+    width:120px;
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    transition-duration:0.3s;
+  }
+  
   body img {
     height: 25vh;
     width: 100%;
