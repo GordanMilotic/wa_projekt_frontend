@@ -120,18 +120,22 @@
     width: 100%;
     height: 30px;
     margin-bottom: 10px;
-    border-radius: 3px;
+    border-radius: 2px;
     border: 0.5px solid lightgray;
     padding-right: 10px;
   }
 
+  .text_input small{
+    position: relative;
+  }
+
   .text_input input:active {
-    border: 1px solid #01bffd;
+    border-color: 1px solid #01bffd;
     border-radius: 2px;
     padding-right: 10px;
   }
 
-  .button input {
+  .button button {
     width: 100%;
     height: 30px;
     padding: 6px 12px;
@@ -146,7 +150,7 @@
     text-decoration: none;
     appearance: button;
   }
-  .button input:active {
+  .button button:active {
     background-color: #01bffd;
     border: 1px solid #01bffd;
     color: white;

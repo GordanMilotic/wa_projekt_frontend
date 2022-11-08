@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.jpg" />
-    <link rel="script" type="text/javascript" href="loginVlasnik.js" />
+    <script src="loginVlasnik.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,7 +18,12 @@
     <img src="logo1.jpg" alt="" />
     <div class="type_of_login">
       <div class="zaposlenik">
-        <input type="button" id="button" onclick="location.href='loginZaposlenik.html';" value="ZAPOSLENIK" />
+        <input
+          type="button"
+          id="button"
+          onclick="location.href='loginZaposlenik.html';"
+          value="ZAPOSLENIK"
+        />
       </div>
 
       <div class="vlasnik">
@@ -27,28 +32,34 @@
     </div>
 
     <div class="inputs">
-        <h2>Prijavite se sa svojim računom</h2>
-  
-        <form method="post">
-          <div class="text_input">
-            <input type="text" placeholder="Ime" required />
-          </div>
-  
-          <div class="text_input">
-            <input type="text" placeholder="Prezime" required />
-          </div>
+      <h2>Prijavite se sa svojim računom</h2>
 
-          <div class="text_input">
-            <input type="password" placeholder="Lozinka" required/>
-          </div>
-  
-          <div class="button">
-            <input
-              type="button"
-              onclick="location.href='mainVlasnik.html';"
-              value="Prijava"
-            />
-          </div>
-        </form>
+      <form method="post" id="form">
+        <div class="text_input">
+          <input type="text" placeholder="Ime" id="ime" required />
+        </div>
+
+        <div class="text_input">
+          <input type="text" placeholder="Prezime" id="prezime" required />
+        </div>
+
+        <div class="text_input">
+          <input
+            type="text"
+            placeholder="Šifra objekta"
+            id="sifraObjekta"
+            required
+          />
+        </div>
+
+        <div class="text_input">
+          <input type="password" placeholder="Lozinka" id="lozinka" required />
+        </div>
+
+        <div class="button">
+          <button type="submit" formaction="">Prijava</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
