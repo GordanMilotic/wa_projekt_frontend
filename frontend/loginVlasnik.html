@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.jpg" />
-    <script src="loginVlasnik.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -31,35 +30,33 @@
       </div>
     </div>
 
-    <div class="inputs">
+    <div class="inputs" id="inputs">
       <h2>Prijavite se sa svojim računom</h2>
 
-      <form method="post" id="form">
+      <form onsubmit="" method="post" id="form">
         <div class="text_input">
-          <input type="text" placeholder="Ime" id="ime" required />
+          <input type="text" placeholder="Ime" id="ime" />
+        </div>
+
+        <div id="error"></div>
+
+        <div class="text_input">
+          <input type="text" placeholder="Prezime" id="prezime" />
         </div>
 
         <div class="text_input">
-          <input type="text" placeholder="Prezime" id="prezime" required />
+          <input type="text" placeholder="Šifra objekta" id="sifraObjekta" />
         </div>
 
         <div class="text_input">
-          <input
-            type="text"
-            placeholder="Šifra objekta"
-            id="sifraObjekta"
-            required
-          />
-        </div>
-
-        <div class="text_input">
-          <input type="password" placeholder="Lozinka" id="lozinka" required />
+          <input type="password" placeholder="Lozinka" id="lozinka" />
         </div>
 
         <div class="button">
-          <button type="submit" formaction="">Prijava</button>
+          <button type="submit" id="button">Prijava</button>
         </div>
       </form>
     </div>
+    <script type="text/javascript" src="loginVlasnik.js"></script>
   </body>
 </html>

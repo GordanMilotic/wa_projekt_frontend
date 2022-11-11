@@ -43,21 +43,6 @@
     transition-duration:0.3s;
   }
 
-  .vlasnik input:active{
-    font-family: "Poppins", sans-serif;
-    color: black;
-    font-size:medium;
-    background-color: white;
-    border: 2px solid black;
-    height:45px;
-    width:120px;
-    cursor: pointer;
-    border-bottom-style: solid;
-    border-top-style: none;
-    border-left-style: none;
-    border-right-style: none;
-  }
-
   .zaposlenik{
     text-align: center;
     padding-top: 10px;
@@ -68,27 +53,11 @@
 
   .zaposlenik input{
     font-family: "Poppins", sans-serif;
-    color: black;
+    color: lightgrey;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid lightgrey;
     height:35px;
     width:100px;
-    cursor: pointer;
-    border-bottom-style: solid;
-    border-top-style: none;
-    border-left-style: none;
-    border-right-style: none;
-    transition-duration:0.3s;
-  }
-
-  .zaposlenik input:active{
-    font-family: "Poppins", sans-serif;
-    color: black;
-    font-size:medium;
-    background-color: white;
-    border: 2px solid black;
-    height:45px;
-    width:120px;
     cursor: pointer;
     border-bottom-style: solid;
     border-top-style: none;
@@ -123,10 +92,6 @@
     border-radius: 2px;
     border: 0.5px solid lightgray;
     padding-right: 10px;
-  }
-
-  .text_input small{
-    position: relative;
   }
 
   .text_input input:active {
