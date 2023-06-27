@@ -103,14 +103,14 @@ export default {
       selectedCleaningMethods: [],
       chemicalsPoured: "",
       chemicalsQuantity: "",
-      /*startPictures: [],
+      startPictures: [],
       endPictures: [],
       startPicturePreview: [],
-      endPicturePreview: [],*/
+      endPicturePreview: [],
       napomena: "",
     };
   },
-  /*methods: {
+  methods: {
     previewImage(index, event, type) {
       const file = event.target.files[0];
       if (file) {
@@ -121,7 +121,7 @@ export default {
         previewList.splice(index - 1, 1, URL.createObjectURL(file));
         pictureList.splice(index - 1, 1, file);
       }
-    },*/
+    },
   async submitForm() {
     if (
       isNaN(this.phLevel) ||
@@ -149,13 +149,13 @@ export default {
     formData.append("username", this.username);
     formData.append("napomena", this.napomena);
 
-    /* this.startPictures.forEach((file) => {
+     this.startPictures.forEach((file) => {
         formData.append("startPictures", file);
       });
 
       this.endPictures.forEach((file) => {
         formData.append("endPictures", file);
-      });*/
+      });
 
     try {
       const response = await axios.post(
@@ -183,16 +183,16 @@ export default {
     this.selectedCleaningMethods = [];
     this.chemicalsPoured = "";
     this.chemicalsQuantity = "";
-    /*this.startPictures = [];
+    this.startPictures = [];
       this.endPictures = [];
       this.startPicturePreview = [];
-      this.endPicturePreview = [];*/
+      this.endPicturePreview = [];
     this.napomena = "";
   },
   logout() {
     this.$router.push("/employeeLogin");
   },
-  //},
+  },
 };
 </script>
 
