@@ -60,7 +60,7 @@ export default {
     async submitFault() {
       try {
         const response = await axios.post(
-          "http://localhost:4001/fault",
+          "https://pool-evidence.onrender.com/fault",
           this.fault
         );
         if (
@@ -85,7 +85,7 @@ export default {
       };
     },
     logout() {
-      this.$router.push("/ownerLogin");
+      this.$router.push("https://pool-evidence.onrender.com/ownerLogin");
     },
   },
 };

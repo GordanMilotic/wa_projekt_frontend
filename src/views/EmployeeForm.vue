@@ -159,7 +159,7 @@ export default {
 
       try {
         const response = await axios.post(
-          "http://localhost:4001/pool",
+          "https://pool-evidence.onrender.com/pool",
           formData
         );
 
@@ -190,7 +190,7 @@ export default {
       this.napomena = "";
     },
     logout() {
-      this.$router.push("/employeeLogin");
+      this.$router.push("https://pool-evidence.onrender.com/employeeLogin");
     },
   },
 };
