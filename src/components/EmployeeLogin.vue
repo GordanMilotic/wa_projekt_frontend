@@ -94,13 +94,13 @@ export default {
         }
 
         if (response.data.message === "Zaposlenik uspješno prijavljen!") {
-          this.$router.push("https://pool-evidence.onrender.com/employeeForm");
+          this.$router.push("/employeeForm");
         } else if (
           response.data.message === "Uneseni bazen nije od tog vlasnika!"
         ) {
           alert("Uneseni bazen nije od tog vlasnika!");
         } else if (response.data.message === "Vlasnik uspješno prijavljen!") {
-          this.$router.push("https://pool-evidence.onrender.com/ownerForm");
+          this.$router.push("/ownerForm");
         }
       } catch (error) {
         console.error(error);
