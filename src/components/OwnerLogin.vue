@@ -62,8 +62,8 @@ export default {
       try {
         const url =
           this.userType === "employee"
-            ? "http://localhost:4001/employee/login"
-            : "http://localhost:4001/owner/login";
+            ? "https://pool-evidence.onrender.com/employee/login"
+            : "https://pool-evidence.onrender.com/owner/login";
         const response = await axios.post(url, this.formData);
 
         if (response.data.message === "Zaposlenik uspješno prijavljen!") {

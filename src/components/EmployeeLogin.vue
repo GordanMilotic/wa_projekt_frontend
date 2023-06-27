@@ -83,24 +83,24 @@ export default {
         let response;
         if (this.userType === "employee") {
           response = await axios.post(
-            "http://localhost:4001/employee/login",
+            "https://pool-evidence.onrender.com/employee/login",
             this.credentials
           );
         } else {
           response = await axios.post(
-            "http://localhost:4001/owner/login",
+            "https://pool-evidence.onrender.com/owner/login",
             this.credentials
           );
         }
 
         if (response.data.message === "Zaposlenik uspješno prijavljen!") {
-          this.$router.push("/employeeForm");
+          this.$router.push("https://pool-evidence.onrender.com/employeeForm");
         } else if (
           response.data.message === "Uneseni bazen nije od tog vlasnika!"
         ) {
           alert("Uneseni bazen nije od tog vlasnika!");
         } else if (response.data.message === "Vlasnik uspješno prijavljen!") {
-          this.$router.push("/ownerForm");
+          this.$router.push("https://pool-evidence.onrender.com/ownerForm");
         }
       } catch (error) {
         console.error(error);
