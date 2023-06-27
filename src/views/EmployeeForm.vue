@@ -190,7 +190,7 @@ export default {
       this.napomena = "";
     },
     logout() {
-      this.$router.push("https://pool-evidence.onrender.com/employeeLogin");
+      this.$router.push("/employeeLogin");
     },
   },
 };

@@ -85,7 +85,7 @@ export default {
       };
     },
     logout() {
-      this.$router.push("https://pool-evidence.onrender.com/ownerLogin");
+      this.$router.push("/ownerLogin");
     },
   },
 };

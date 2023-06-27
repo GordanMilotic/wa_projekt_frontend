@@ -29,9 +29,9 @@ export default {
   methods: {
     handleLoginSuccess() {
       if (this.currentLogin === "employeeLogin") {
-        this.$router.push("https://pool-evidence.onrender.com/employeeForm");
+        this.$router.push("/employeeForm");
       } else if (this.currentLogin === "ownerLogin") {
-        this.$router.push("https://pool-evidence.onrender.com/ownerForm");
+        this.$router.push("/ownerForm");
       }
     },
   },
