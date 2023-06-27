@@ -103,14 +103,14 @@ export default {
       selectedCleaningMethods: [],
       chemicalsPoured: "",
       chemicalsQuantity: "",
-      startPictures: [],
+      /*startPictures: [],
       endPictures: [],
       startPicturePreview: [],
-      endPicturePreview: [],
+      endPicturePreview: [],*/
       napomena: "",
     };
   },
-  methods: {
+  /*methods: {
     previewImage(index, event, type) {
       const file = event.target.files[0];
       if (file) {
@@ -121,78 +121,78 @@ export default {
         previewList.splice(index - 1, 1, URL.createObjectURL(file));
         pictureList.splice(index - 1, 1, file);
       }
-    },
-    async submitForm() {
-      if (
-        isNaN(this.phLevel) ||
-        isNaN(this.clLevel) ||
-        (this.chemicalsPoured !== "Bez kemije" && isNaN(this.chemicalsQuantity))
-      ) {
-        alert(
-          "Please enter a valid number for PH level, CL level, and chemicals quantity."
-        );
-        return;
-      }
+    },*/
+  async submitForm() {
+    if (
+      isNaN(this.phLevel) ||
+      isNaN(this.clLevel) ||
+      (this.chemicalsPoured !== "Bez kemije" && isNaN(this.chemicalsQuantity))
+    ) {
+      alert(
+        "Please enter a valid number for PH level, CL level, and chemicals quantity."
+      );
+      return;
+    }
 
-      const formData = new FormData();
-      formData.append("name", this.name);
-      formData.append("phLevel", this.phLevel);
-      formData.append("clLevel", this.clLevel);
-      formData.append("tabletCount", this.tabletCount);
+    const formData = new FormData();
+    formData.append("name", this.name);
+    formData.append("phLevel", this.phLevel);
+    formData.append("clLevel", this.clLevel);
+    formData.append("tabletCount", this.tabletCount);
 
-      this.selectedCleaningMethods.forEach((method) => {
-        formData.append("cleaningMethods", method);
-      });
+    this.selectedCleaningMethods.forEach((method) => {
+      formData.append("cleaningMethods", method);
+    });
 
-      formData.append("chemicalsPoured", this.chemicalsPoured);
-      formData.append("chemicalsQuantity", this.chemicalsQuantity);
-      formData.append("username", this.username);
-      formData.append("napomena", this.napomena);
+    formData.append("chemicalsPoured", this.chemicalsPoured);
+    formData.append("chemicalsQuantity", this.chemicalsQuantity);
+    formData.append("username", this.username);
+    formData.append("napomena", this.napomena);
 
-      this.startPictures.forEach((file) => {
+    /* this.startPictures.forEach((file) => {
         formData.append("startPictures", file);
       });
 
       this.endPictures.forEach((file) => {
         formData.append("endPictures", file);
-      });
+      });*/
 
-      try {
-        const response = await axios.post(
-          "https://pool-evidence.onrender.com/pool",
-          formData
-        );
+    try {
+      const response = await axios.post(
+        "https://pool-evidence.onrender.com/pool",
+        formData
+      );
 
-        if (response.status === 200) {
-          alert("Form submitted successfully");
-          this.resetForm();
-        } else {
-          alert(response.data.message);
-        }
-      } catch (error) {
-        console.error(error);
-        alert("An error occurred while submitting the form. Error: " + error);
+      if (response.status === 200) {
+        alert("Form submitted successfully");
+        this.resetForm();
+      } else {
+        alert(response.data.message);
       }
-    },
-    resetForm() {
-      this.username = "";
-      this.name = "";
-      this.phLevel = "";
-      this.clLevel = "";
-      this.tabletCount = "";
-      this.selectedCleaningMethods = [];
-      this.chemicalsPoured = "";
-      this.chemicalsQuantity = "";
-      this.startPictures = [];
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while submitting the form. Error: " + error);
+    }
+  },
+  resetForm() {
+    this.username = "";
+    this.name = "";
+    this.phLevel = "";
+    this.clLevel = "";
+    this.tabletCount = "";
+    this.selectedCleaningMethods = [];
+    this.chemicalsPoured = "";
+    this.chemicalsQuantity = "";
+    /*this.startPictures = [];
       this.endPictures = [];
       this.startPicturePreview = [];
-      this.endPicturePreview = [];
-      this.napomena = "";
-    },
-    logout() {
-      this.$router.push("/employeeLogin");
-    },
+      this.endPicturePreview = [];*/
+    this.napomena = "";
   },
+  logout() {
+    this.$router.push("/employeeLogin");
+  },
+  //},
 };
 </script>
 
