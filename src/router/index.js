@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Login from "../views/Login.vue";
 import EmployeeForm from "../views/EmployeeForm.vue";
 import OwnerForm from "../views/OwnerForm.vue";
 import EmployeeLogin from "../components/EmployeeLogin.vue";
